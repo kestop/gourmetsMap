@@ -1,0 +1,152 @@
+.indent {margin-left: 80px;}
+section { 
+	display: block;
+	color: white;
+	font-size: 1em;
+}
+body {
+	background-color: #a8d48b;/*in case of no suppuort of backgound image*/
+	background-image: url("background.jpg");
+	background-size: 100%;
+	font-family: 'Oswald', sans-serif;
+	padding: 1%;
+	margin: 0;
+	min-width: 640px;
+	color: #696969;
+}
+
+form input {
+	font-family: 'Oswald', sans-serif;
+}
+form p{
+	font-family: 'Oswald', sans-serif;
+}
+#mainDiv {
+	background: rgba(255,255,255,0.9);
+	border-radius: 0.5em;
+	padding: 1em;
+}
+form#searchBox {
+	float: right;
+	margin-top: 1em;
+}
+
+ul#menu {
+	padding: 0;
+	margin-bottom: 11px;
+	float: left;
+}
+
+ul#menu li{
+	display: inline;
+	margin-right: 3px;
+}
+
+ul#menu li a {
+	background-color: #ffffff;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #696969;
+	border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+	color: white;
+	background-color: black;
+}
+h1#welcome{
+	border-bottom: 3px solid #cc9900;
+	color: #996600;
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+	margin: 1em;
+	text-align: center;
+	padding-top: 1em;
+}
+
+h1#welcome #a1 {
+	color: #996600;
+	text-decoration: none;
+	-o-transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-ms-transition: all .5s;
+}
+
+h1#welcome #a1:hover {
+	font-size: 1.1em;
+	text-shadow: 0 .1em .2em rgba(204,153,0,.7);
+	text-decoration: none;
+	color: #996600;
+}
+
+h1#welcome #a2 {
+	padding-top: 0.5em;
+	font-size: 0.7em;
+	display: block;
+	float: right;
+	text-decoration: none;
+}
+
+h1#welcome #a2:hover {
+	color: green;
+	text-decoration: underline;
+}
+
+section img {
+	height: 6em;
+	width: 6em;
+}
+
+
+main {
+	text-align: center;
+}
+main div {
+	vertical-align: center;
+}
+main table{
+	padding-left: 0em;
+	margin: 0 auto;
+}
+main img { 
+	/*NEED SUPPORT FOR IE*/
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+	transition: width 2s, height 2s, transform 2s;
+	background-color: pink;
+	display: block;
+	height: 10em;
+	width: 10em;
+}
+
+main img:hover {
+	width: 12em;
+	height: 12em;
+	-webkit-transform: rotate(360deg); /* Safari */
+	transform: rotate(360deg);
+}
+
+section {
+	background-color: white;
+	border-radius: 0.5em;
+	padding: 1em;
+	color: #696969;
+}
+section.leftC,section.rightC {
+	width: 15%;
+
+	text-align: center;
+	
+}
+
+section.leftC {
+	float: left; 
+	margin: 0 1% 0 4%;
+	border-right: 0.3em solid #cc9900;
+}
+section.rightC {
+	float: right;
+	margin: 0 4% 0 1%;
+	border-left: 0.3em solid #cc9900;
+}

@@ -1,0 +1,95 @@
+1. I am gonna do the server now. 17/05
+
+A few questions about server
+Where do I run it ? try Heroku
+
+Under what username does your server run? Does it need root/administrator privilege to access the port and, if so, can you reduce the privilege after that to improve security? If you run secure, how do you create your own (self-signed) certificate?
+
+How do you do content negotiation, given that the standard libraries have very poor support for it? How do you do URL validation, given that libraries don't do a complete job of it?
+
+If your server updates files or a database or does other exciting things, how do you ensure that a hacker can't do any damage? Are there any issues with UTF-8? How do you authenticate visitors? If your server allows access from programs rather than people, how do you authenticate them? How might you implement URL rewriting or something similar to create clean URLs? How do you set up a system for dynamic pages without a standard to guide you?
+
+try to install express
+have to follow the guide on the nodejs website.
+
+TOTALLY HAVE NO IDEA WHAT A SERVER IS! FAILED!
+maybe design a login and register page first.
+
+2.Design a login page 
+use email and pass to login , validation needed later 
+made cool effects on the login button and register button (mostly by Hover in css)
+
+one problem : I want to get a transparent box without affecting the content in pages. This situation happens when I apply a opacity on whole and I found that individual opacity in minor subclass cannot change the fact.
+Answer : use background rgba where a stands for alpha channel.
+
+3.Looking through some documents about Express Server and Ian's lecture notes about server and database, but still do not have a clear idea.
+Decided to add image switching effects to the index page, which I alawys think is cool . ( By javaScript)
+it is really complicated... lots of script and css stuff.... stop for now .
+go back to database 
+
+4.Database implementation
+Use Ian's server for now, trying to add a database. 
+following Ian's notes.
+18/05 starting from the register page.
+Person table should be {id,email,username,password}, where id is the PK. 
+The schema is CREATE TABLE Person (id INTEGER PRIMARY KEY,username TEXT NOT NULL, password TEXT NOT NULL, email TEXT UNIQUE NOT NULL).
+Now come to do the insertion for registeration.
+Trying to use "require("sqlite3")" but failed. Someone says it is because require is from node.js(server-side) while what I need here is for brower/client side technology. I think that makes sense so I found some commands like "openDatabse" "executeQuery". This turns out that I am using WebSQL !! I don't think Ian has coverred this topic but I cannot think of another way of javascript controlling database, since Ian said no php or asp.
+
+Suddenly, I realized that I should not use WebSQL. Instead, I should use server reponse to do this. I think I need to reread the notes.
+
+Finally, I asked Ian , and solvded it in one minute.
+
+Modify the server.js and added function for matching the request and function.
+
+How to get a response correctly ? Failed.
+
+Use prepared Statement. 
+
+
+
+5.Fixing an bug in main.js that the nav bar doesn't show because a function before that is incorrect in XML. That I did not use escaping character correctly. I used to use &copy; as I did in HTML but in XML only &#169 is valid.(From my real experience). However, &amp is valid.
+
+7.Added validation for searchbox on the homepage
+
+8.Try to add google map into the resturant detal page
+
+9.added some really cool hover effect on the login/register input box. (Box-shawdow)
+
+10.To create a restuarnt info page with database . Undone.
+
+6.Mona's part 
+a good icon 
+some svgs pngs
+a world-food image 
+and four regional images
+
+11.Added validation for reg page , script provided by javascriptCode, for free use. It has to be included in the html file.
+
+12.Added some hover feature for homepage buttons
+
+13.Added shadow for the title
+
+14.Added a search result for index page using JS,still don't how to connect with database
+
+15.Using nodemen in node.js (nodemon will watch the files in the directory in which nodemon was started, and if any files change, nodemon will automatically restart your node application.)
+
+16.Trying to move to express. 21/05
+
+npm init -- create package.json
+learned routing 
+res.sendFile() is so simple ! 
+learning jade(or pug, the new name)
+
+
+17.host the website on Heroku
+
+
+Q1. How to submit the register form into the database ??? 
+
+Q2. How to validate forms without using onclick or onsubmit ???
+
+Q3. I found a validating script, can I use it ? 
+
+Q4. Escape char in main.js , can I use it ?
+

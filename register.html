@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb" xml:lang="en-gb">
+<head>
+  <title>FoodieMap Sign Up</title>
+  <!-- <link rel="stylesheet" type="text/css" href="normalize.css" /> -->
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="loginStyle.css" />
+
+  <script language="JavaScript" src="gen_validatorv4.js"
+  type="text/javascript" xml:space="preserve"></script>
+  <script type="text/javascript" src = "register.js" 
+  xml:space="preserve"></script>
+  <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+  <!--[if IE]>
+  <link href='ie.css' rel='stylesheet' type='text/css' >
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"
+  ></script>
+  <![endif]-->
+  <meta charset="UTF-8"/>
+  <!--[if IE]>IE only<![endif]-->
+  <!--[if !IE]><!-->non-IE<!--<![endif]-->
+</head>
+<body>
+  <div class="page-container">
+    <h1>Register</h1>
+    <form id = "regForm" action="/register" method="get">
+      <input id="username" name = "username" type="text" placeholder="Username" required="required" />
+      <br/>
+      <input id="email" name = "email" type="text" placeholder="Email" required="required" />
+      <br/>
+      <input id="password" name = "password" type="password" placeholder="Password" required="required" />
+      <br/>
+      <input id="confpassword" name = "confpassword" type="password" placeholder="Confirm Password" required="required" />
+      <br/>
+      
+      <input id="button" type="submit" value="Sign me up"/>
+      
+    </form>
+    <!-- For validation -->
+    <script language="JavaScript" type="text/javascript"
+    xml:space="preserve">//<![CDATA[
+    var frmvalidator  = new Validator("regForm");
+    frmvalidator.addValidation("username","req","Please enter your Username");
+    frmvalidator.addValidation("username","maxlen=10","Max length is 10");
+
+    frmvalidator.addValidation("email","maxlen=50");
+    frmvalidator.addValidation("email","req");
+    frmvalidator.addValidation("email","email");
+
+    frmvalidator.addValidation("confpassword","eqelmnt=password","The confirmed password is not same as password");
+    frmvalidator.addValidation("password","neelmnt=username","The password should not be same as username");
+    //]]></script>
+
+    <div class="connect">
+      <p>Or <a href="login.html">Login</a></p> 
+    </div>
+  </div>
+</body>
+
+</html>
+
+
